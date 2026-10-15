@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    implementation 'org.bytedeco:tesseract-platform:5.5.2-1.5.13'
+    implementation 'org.apache.pdfbox:pdfbox:3.0.5'
+    implementation 'com.twelvemonkeys.imageio:imageio-core:3.12.0'
+    implementation 'com.twelvemonkeys.imageio:imageio-jpeg:3.12.0'
+    implementation 'org.apache.poi:poi-ooxml:5.4.0'
+}
+
+application {
+    mainClass = 'app.App'
+}
